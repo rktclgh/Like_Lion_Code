@@ -27,3 +27,11 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+
+
+#package Files#
+
+*.jar
+*.war
+*.log
