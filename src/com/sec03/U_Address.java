@@ -40,19 +40,27 @@ class U_Address
         this.tel = tel;
     }
 
-
-    public void prn()
-    {
-
-        System.out.printf("%10s %10s %10s\n", this.getName(), this.getAddr(), this.getTel());
+    @Override
+    public String toString() {
+        return "U_Address{" +
+                "name='" + name + '\'' +
+                ", addr='" + addr + '\'' +
+                ", tel='" + tel + '\'' +
+                '}';
     }
 
     public static void main(String[] args) {
         U_Address a1 = new U_Address();
         U_Address b1 = new U_Address();
-        a1.prn();
-        b1.prn();
+//        a1.prn();
+//        b1.prn();
+
+
+        System.out.println(a1);
+        System.out.println(b1);
     }
+
+
 }
 
 
