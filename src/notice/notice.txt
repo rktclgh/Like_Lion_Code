@@ -1,0 +1,94 @@
+3/4
+
+1.static return 메서드를 작성하고 호출하는 방법을 학습한다
+2. object 클래스의 주요 메서드와 역할을 이해하고 활욜할 수 있다.
+3. 주소 객체를 생성하고, 이를 활용하여 non-static 멤버를 다룰 수 있다.
+4. 박싱(boxing)과 언박싱(unboxing) 그리고 캐스팅(casting)의 개념을 이해하고 적절히 적용할 수 있다.
+
+
+3/5
+
+1. 연산자의 종류와 역할을 이해하고,  자바의 제어문(비교문, 선택문, 반복문)의 기본 개념을 익힌다.
+
+2. 연산자의 우선순위(Precedence)와 결합 방향(Associativity)을 이해하여 연산이 수행되는 순서를 예측할 수 있다.
+
+3. 다양한 연산자를 조합하여 복잡한 연산식(Expression)을 구성하는 방법을 숙지하고 활용할 수 있다.
+
+4. 비교문, 선택, 반복문 등의 제어문을 활용하여 자바 프로그램의 흐름을 제어할 수 있다. 
+
+3/6
+
+
+
+
+
+
+
+
+- src : 코드
+- etc : 문제
+- notice : 정리
+
+- com.test			<< 클래스 만들기, 메소드 호출해 보기 >>
+	
+	메소드 선언 및 호출
+	- 접근제한자 static 리턴타입 userName(){}
+	** public static void sleep(long millis) throws InterruptedException
+	*메소드 뒤에 선언되는 throws 키워드는 프로그램이 실행되면서 발생되는 상황을 클래스로 생성해서 
+	 JVM이 알려주는 예외처리 위임
+	 
+	- 리턴데이터타입 [ 7가지 자료형과 참조자료형 return 키워드 / void ]
+	public static void prn() {
+		System.out.println("안녕하세요");
+	}
+	- 호출 클래스명.메소드
+	
+	- public static void UserName(매개인자*){}
+	
+	- public static [datatype] UserName(매개인자*){
+		return [datatype_value]
+	}
+	
+	
+- com.sec01			<< 기본 자료형, 값 >>
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+	DataType.java - boolean 타입 확인
+
+
+-com.sec03 클래스 선언, 생성, 멤버 호출
+class 	- userDataType
+		- 선언된 멤버변수는 은닉(private)하고 오픈된 메소드(public)를 통해
+		  값 전달 및 변경(setter)하는 리턴하는 구조(getter)를 가진다
+		- class 멤버 = 필드 + 메소드
+		
+		[선언방법]
+			접근 제한 [abstract] class userName{
+			    필드 + 메소드
+			}
+
+ex) 정수 두 수를 관리하는 Test 클래스를 만들어 보자.
+class Test{
+    private int b;
+    private int b;
+    
+    //setter -void
+    public void setA(int a)
+    {
+    this.a = a;
+    }
+    public void setB(int b)
+    {
+    this.b = b;
+    }
+    //getter
+    public int getA()
+    {
+    return a;
+    }
+    public int getB()
+    {
+        return b;
+    }
+
+    걍 게터세터 만들거나 롬복 쓰자 제발
+}
