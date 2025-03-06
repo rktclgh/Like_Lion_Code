@@ -2,9 +2,9 @@
 
 자바의 제어문 (JDK 21 기준)
 
-4.1 조건문
-4.2 반복문
-4.3 분기문
+4.1 조건문 -if, switch ~ case
+4.2 반복문 - while() ; do~while(); /for
+4.3 분기문 - return, continue, break;
 4.4 중첩문
 
 ---
@@ -24,8 +24,38 @@ if (boolean expression) {
     statement;
 }
 ```
+- case 01: ~만일에 ~ 하면
+    if(boolean expression)
+    {
+        statement;
+    }
 
-exam)
+   ex) 만약 a가 0보다 크면 "양수" 출력
+   if(a>0){
+   system.out.println(a);
+   }
+- case 02: ~만일에 ~ 하면 ~gkrh, rmfjgwl dksgdmaus ~ gkwk.
+    if(boolean expression){
+        statement;
+        }
+        else{
+        statement;}
+eX)
+만일에 a가 0보다 크면 양주 출력, 그렇지 않으면 아니잖아!!"
+f( a> 0){ // 결과가 true 명령을 수행한다.
+system.out.println(a);
+else if
+system.out.println("아니잖아!!!);
+-case 03
+if (boolean expression) {
+statement;
+else t
+statement;
+
+
+
+exam)만일에 num이 0보다 크면 양수를 출력하고, 그렇지 않고 0보다 작으면 "음수"룰 출력하고
+     그렇지 않으면 "0 입니다" 를 출력하자.
 
 int num = 10;
 if (num > 0) {
