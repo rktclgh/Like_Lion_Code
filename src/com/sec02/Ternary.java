@@ -1,8 +1,15 @@
 package com.sec02;
 
+
 public class Ternary {
 
 	public static void main(String[] args) {
+
+
+
+
+
+
 		int y, k;
 		y = 10;
 		k = y < 0 ? -y : y;
