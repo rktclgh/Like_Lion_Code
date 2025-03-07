@@ -13,6 +13,8 @@ public class d_ifTest {
 
 	// 2. 범위와 논리 연산자를 조합한 경우
 	public static void checkEligibility(int age, String country) {
+		// age가 18세 이상 30세 이하이거나 country가 Korea 인 경우는 조건을 충족한다라고 출력하자
+		// .equals() 객체의 값을 비교하는 Onject 재정의 메소드
 		if ((age >= 18 && age <= 30) || country.equals("Korea")) {
 			System.out.println("조건을 충족합니다.");
 		} else {

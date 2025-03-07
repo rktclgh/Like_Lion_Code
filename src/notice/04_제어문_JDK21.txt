@@ -139,7 +139,17 @@ do {
 for (initialization; condition; update) {
     statement;
 }
-```
+```initialization : 초기값을 여러개 선언할 수 있고 비워둘수도 있다.
+   condition
+   : 조건식은 여러개 가능하나 결과가 true, false로 리턴되어야 한다.
+   update : 루프변수(제어변수, 조권변수) 에 해당하는 변수값을 증가, 증감
+   1 -> 2 true-> 3 -> 4
+   2 true-> 3
+   -> 4
+   2 true->
+   3
+   -> 4
+   2 false
 
 exam)
 
