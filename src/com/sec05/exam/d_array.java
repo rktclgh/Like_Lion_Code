@@ -1,6 +1,6 @@
-package com.sec05;
+package com.sec05.exam;
 
-public class c_array {
+public class d_array {
     public static void main(String[] args) {
         Test();
     }

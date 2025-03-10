@@ -1,4 +1,4 @@
-package com.sec05;
+package com.sec05.exam;
 
 public class a_Array {
 
