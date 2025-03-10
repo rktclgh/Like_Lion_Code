@@ -21,6 +21,10 @@ public class U_Score {
     int tot;
     int avg;
 
+    public U_Score() {
+//        super();
+    }
+
     U_Score(String name, int kor, int eng, int mat) {
         this.name = name;
         this.kor = kor;
