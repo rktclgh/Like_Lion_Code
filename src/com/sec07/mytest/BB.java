@@ -3,6 +3,9 @@ package com.sec07.mytest;
 public class BB extends AA{
     private int c;
 
+    public BB() {
+        System.out.println("B기본생성자");
+    }
 
     public int getC()
     {

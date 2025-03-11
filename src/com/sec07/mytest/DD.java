@@ -3,6 +3,9 @@ package com.sec07.mytest;
 public class DD extends BB{
     private int d;
 
+    public DD() {
+        System.out.println("D기본생성자");
+    }
 
     public int getD() {
         return d;

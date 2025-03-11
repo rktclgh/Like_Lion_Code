@@ -2,7 +2,11 @@ package com.sec07.mytest;
 
 public class AA {
 
-   private int a;
+    public AA() {
+        System.out.println("A기본생성자");
+    }
+
+    private int a;
     private int b;
 
 
