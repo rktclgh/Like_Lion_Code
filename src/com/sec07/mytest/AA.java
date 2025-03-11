@@ -6,6 +6,11 @@ public class AA {
         System.out.println("A기본생성자");
     }
 
+    public AA(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
     private int a;
     private int b;
 

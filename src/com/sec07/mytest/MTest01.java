@@ -7,13 +7,11 @@ public class MTest01 {
         DD d1 = new DD(); //(a+b)m -c *d =
         System.out.println("초기값 확인 : " + d1.getRes());
 
-        //객체를 생성할 때 초기값 전달 후 연산 결과 리턴
+        prn(d1);
+        BB b1 = new BB();
+        prn02(b1);
 
-        //객체를 초기값으로 생성 해 놓고 setter로 값을 전달 및 변경 후 결과를 리턴
-
-
-
-
+        //객체를 생성할 때 초기값 전달 후 연산 결과 리턴\
     }
 
     public static void prn(DD res)
@@ -25,4 +23,15 @@ public class MTest01 {
         System.out.println(res.getRes());
 
     }
+
+    public static void prn02(AA res)
+    {
+        res.setA(100);
+        res.setB(20);
+        ((BB)res).setC(1);
+        ((DD)res).setD(1);
+        System.out.println(((DD)res).getRes());
+    }
+
+
 }
