@@ -46,6 +46,33 @@ day 09
 
 4. 상속의 개념과 오버라이딩, 오버로딩을 활용해서 기능 구현, 선언, 활용을 자유롭게 할 수 있다.
 
+Day10 3월 11일
+1. 상속(Inheritance)의 개념과 활용을 이해하고, 부모 클래스의 기능을 재사용하여 코드의 중복을 줄일 수 있다.
+2. 추상 클래스(Abstract Class)의 개념을 이해하고, 공통 기능을 정의하여 코드의 일관성을 유지할 수 있다.
+3. 다형성(Polymorphism)을 활용하여 객체를 동적으로 관리하고, 유연한 코드 구조를 만들 수 있다.
+4. 인터페이스(Interface)를 사용하여 유연한 설계를 구현하고, 다중 구현을 활용할 수 있다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 - src : 코드
@@ -53,26 +80,26 @@ day 09
 - notice : 정리
 
 - com.test			<< 클래스 만들기, 메소드 호출해 보기 >>
-	
+
 	메소드 선언 및 호출
 	- 접근제한자 static 리턴타입 userName(){}
 	** public static void sleep(long millis) throws InterruptedException
-	*메소드 뒤에 선언되는 throws 키워드는 프로그램이 실행되면서 발생되는 상황을 클래스로 생성해서 
+	*메소드 뒤에 선언되는 throws 키워드는 프로그램이 실행되면서 발생되는 상황을 클래스로 생성해서
 	 JVM이 알려주는 예외처리 위임
-	 
+
 	- 리턴데이터타입 [ 7가지 자료형과 참조자료형 return 키워드 / void ]
 	public static void prn() {
 		System.out.println("안녕하세요");
 	}
 	- 호출 클래스명.메소드
-	
+
 	- public static void UserName(매개인자*){}
-	
+
 	- public static [datatype] UserName(매개인자*){
 		return [datatype_value]
 	}
-	
-	
+
+
 - com.sec01			<< 기본 자료형, 값 >>
 https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
 	DataType.java - boolean 타입 확인
@@ -97,7 +124,7 @@ class 	- userDataType
 		- 선언된 멤버변수는 은닉(private)하고 오픈된 메소드(public)를 통해
 		  값 전달 및 변경(setter)하는 리턴하는 구조(getter)를 가진다
 		- class 멤버 = 필드 + 메소드
-		
+
 		[선언방법]
 			접근 제한 [abstract] class userName{
 			    필드 + 메소드
@@ -107,7 +134,7 @@ ex) 정수 두 수를 관리하는 Test 클래스를 만들어 보자.
 class Test{
     private int b;
     private int b;
-    
+
     //setter -void
     public void setA(int a)
     {
