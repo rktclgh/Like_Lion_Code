@@ -16,7 +16,7 @@ public class MyClass {
 
 
     public static void main(String[] args) {
-//        System.out.println(new MyClass());
+//        System.out.println(new b_MyClass());
 
         MyClass m = new MyClass();
         MyClass m1 = new MyClass(1);
