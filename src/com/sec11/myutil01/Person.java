@@ -29,6 +29,14 @@ public class Person implements Comparable<Person> {
        this.name = name;
    }
 
+   // this.id - m_P.id 결과가 양수이면 this더 크고 음수이면 this가 작다
+    // this.id - m_p.id 음수(-)-> this 앞에 배치된다.
+// this.id - m_P.id 양수(+)-> m_P 앞에 배치된다.
+// this.id - m_p.id O -> 순서 변동이 없다.
+// compareTo(루세, 루리) = 111- 333 = -222 -> 유지
+// compareTo(루리, 루오) = 333- 222 = 111 -> 루오와 루리가 교환
+// compareTo(루세, 루오) = 111 - 222 =-111 -> 유지
+
    @Override
    public int compareTo(Person m_p) {      
        return (this.id - m_p.id);
@@ -67,10 +75,10 @@ public class Person implements Comparable<Person> {
         System.out.println("기본 정렬 :\n" + Arrays.toString(perArr));
          
    
-        Arrays.sort(perArr, Person.AgeComparator);        
+        Arrays.sort(perArr, Person.AgeComparator);
         System.out.println("나이순으로 정렬:\n"+Arrays.toString(perArr));
-         
-   
+
+//
         Arrays.sort(perArr, Person.IdComparator);
         System.out.println("Id 순으로 정렬:\n"+Arrays.toString(perArr));
 
