@@ -21,5 +21,9 @@ public class h_NIOChar {
         //문자열 읽기
         List<String> lines02 = Files.readAllLines(path);
         lines02.forEach(System.out::println);
+
+
+        Runtime r = Runtime.getRuntime();
+        r.exec("notepad.exe");
     }
 }
