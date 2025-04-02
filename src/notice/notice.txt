@@ -172,9 +172,57 @@ Day20 3월 26일
 4. 날짜 및 시간 할수를 활용하여 기간 계산. 날짜 추출. 포맷 변경 등의 결과를 도출하고 이름 리턴값으로 활용할 수 있다.
 
 
+Day21 3월 27일
 
+1. 조인의 개념과 종류를 이해하고, INNER JOIN, OUTER JOIN, CROSS JOIN의 차이를 설명할 수 있다.
 
+2. ON, USING, NATURAL JOIN을 활용하여 두 개 이상의 테이블을 조인하고 원하는 데이터를 추출할 수 있다.
+3. 실무에서 필요한 SELF JOIN과 EQUI JOIN을 적용하여 계층 구조 및 조건 기반 데이터 연결을 구현할 수 있다.
+계층 구조(상사-부하) 표현하고 싶을 때 + SELF JOIN
+조건 정확히 맞춰서 조인하고 싶을 때 > EQUI JOIN
 
+4. 데이터 레코드 기반의 엔티티를 이용하여 집합, 교집합, 차집합등 집합연산을 구현하고 설명할 수 있다.
+
+5. 서브쿼리를 이해하고 설명 할 수 있다.
+
+Day22 3월 28일==
+1. 서브쿼리의 개념과 작성 위치(WHERE, SELECT, FROM 절 등)를 이해하고 적용할 수 있다.
+2. 단일 행 서브쿼리와 다중 행 서브쿼리의 차이점과 적절한 연산자(IN, ANY, ALL 등)의 사용법을 설명할 수 있다.
+3. 서브쿼리를 활용하여 메인 쿼리의 조건을 동적으로 설정하고, 복잡한 조건의 데이터를 조회할 수 있다.
+4. 상호 연관 서브쿼리(Correlated Subquery)의 동작 방식을 이해하고, 행마다 조건이 달라지는 상황에 적절히 활용할 수 있다.
+
+Day23 3월 31일
+1. 테이블 생성 시 다양한 제약 조건(Primary Key, Unique, Check, Default, Foreign Key)을 선언하고 적용할 수 있다.
+2. INSERT, SELECT, UPDATE, DELETE 문을 활용하여 데이터베이스의 기본적인 CRUD 작업을 수행할 수 있다.
+3. VIEW을 생성하고 수정하여 복잡한 SELECT 문을 재사용 가능한 가상 테이블 형태로 활용할 수 있다.
+4. VIEW에서 WITH CHECK OPTION, SQL SECURITY, ALGORITHM 등의 옵션을 이해하고 적절하게 사용할 수 있다.
+5. 제약 조건 및 VIEW 설정이 데이터 무결성과(SHOW CREATE VIEW, IS_UPDATABLE) 보안, 조작에 어떤 영향을 미치는지 설명하고 실습할 수 있다.
+
+Day24 4월 1일
+1. VIEW를 생성하고 수정하여 복잡한 SELECT 문을 재사용 가능한 가상 테이블 형태로 활용할 수 있다.
+2. VIEW에서 WITH CHECK OPTION, SQL SECURITY, ALGORITHM 등의 옵션을 이해하고 적절하게 사용할 수 있다.
+• WITH CHECK OPTION: 뷰를 통해 데이터 변경 시 뷰의 WHERE 조건을 반드시 만족해야만 수정이 허용됨
+- SQL SECURITY {DEFINER | INVOKER}: 뷰 실행 시 권한을 누구 기준으로 할 것인지 설정 (뷰 생성자 or 호출자)
+- ALGORITHM = {MERGE | TEMPTABLE | UNDEFINEDI: 뷰 내부의 SELECT 쿼리를 처리하는 방식
+3. 스토어드 프로시저와 사용자 정의 함수의 차이점과 사용 목적을 이해하고 설명할 수 있다.
+- 프로시저(Procedure): 여러 SQL 문을 묶어 저장하고 실행. 주로 데이터 변경, 복잡한 로직 처리, 트랜잭션에 사용됨. CALL proc_name(..)
+- 함수(Function): 하나의 값을 반환하며 SELECT 문 안에서도 사용할 수 있음. 주로 계산식, 포맷, 데이터 가공 시 사용. SELECT my_func...)
+4. 프로시저와 함수를 생성(Create), 호출(Call), 수정(Alter), 삭제(Drop)하는 문법을 활용할 수 있다.
+- 생성: CREATE PROCEDURE, CREATE FUNCTION
+- 호출: CALL procedure_name(...), SELECT function_name(..)
+- 수정: ALTER PROCEDURE, ALTER FUNCTION
+- 삭제: DROP PROCEDURE, DROP FUNCTION
+5. 변수 선언 (DECLARE, SET), 조건문(IF ... THEN ... ELSE ... END IF), 반복문(LOOP, WHILE, REPEAT), 커서(Cursor)를 활용하여 복잡한 로직을 구현할 수 있다.
+
+Day25 4월 2일
+
+1. 프로시저(Stored Procedure)의 구조와 사용법을 이해하고, 입력(IN), 출력(OUT) 파라미터를 통해 반복적 작업을 자동화할 수 있다.
+
+2. 사용자 정의 함수(UDF: User Defined Function)를 생성하고 호출하는 방법을 익혀, 쿼리 내에서 재사용 가능한 로직을 구현할 수 있다.
+
+3. 인덱스(Index)의 개념과 종류(Primary, Unique, Composite 등)를 이해하고, 조회 성능 향상을 위해 적절히 설계할 수 있다.
+
+4. EXPLAIN 명령어를 활용하여 인덱스가 적용되는 쿼리 실행 계획을 분석하고, 쿼리 최적화를 위한 인덱스 활용 방법을 설명할 수 있다.
 
 
 
