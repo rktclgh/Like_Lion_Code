@@ -1,0 +1,45 @@
+ << Emp-Dept  N:1 >>  
+MySQLApp
+└── src
+    └── com
+        └── mysqlapp
+            ├── Main.java
+            ├── controller
+            │   ├── DeptController.java
+            │   └── EmpController.java
+            ├── dao
+            │   ├── DeptDAO.java (I)
+            │   ├── DeptDAOImpl.java (C)
+            │   ├── EmpDAO.java (I)
+            │   └── EmpDAOImpl.java (C)
+            ├── model
+            │   ├── Dept.java
+            │   ├── Emp.java
+            │   └── EmpDeptDTO.java
+            ├── service
+            │   ├── DeptService.java (I)
+            │   ├── DeptServiceImpl.java (C)
+            │   ├── EmpService.java (I)
+            │   └── EmpServiceImpl.java (C)
+            ├── view
+            │   ├── DeptView.java
+            │   └── EmpView.java
+            └── common
+                └── JDBCTemplate.java      -- [2]
+    └── db.properties                  -- [1]
+
+
+
+    ==================================================================
+    1.model의 클래스들은 record로 구현되어 필드 생성자와 getter만 구성됨을 확인
+    2. com.mysqlapp.dao의 클래스들은 try~with~resources 구문을 사용한 것을 확인 후
+    jdbctemplate에서 close() 구현 사용중 반드시 finally{close(conn);} 명시 확인
+
+    3. try~with~resources 구문을 사용한 객체는 finally{close()}를 명시하지 않아도 된다.
+    -> 코드 간결, 누수방지용
+
+    5. 참조관계가 있는 테이블의 model 생성 및 조인, 서브쿼리 등 구문을 실행하는 방법 확인
+
+
+    6. view -> Controller -> Service[biz, dao] ->[JdbcTemplate] -> db
+
