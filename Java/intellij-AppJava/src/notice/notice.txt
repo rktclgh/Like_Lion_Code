@@ -300,6 +300,21 @@ Day32 4월 11일
 
 
 
+Day33 4월 15일
+1. 새로운 스레드 API를 활용하여, I/O 바운드 작업과 CPU 바운드 작업에 적합한 동시성 프로그래밍 모델을 설계하고 구현할 수 있다.
+- JDK 21의 Virtual Thread와 전통 ThreadPool을 비교
+• 작업 특성에 따른 최적의 스레드 구조를 설계
+2. Executors 및 Vitual Thread Executor를 활용하여, 다양한 유형의 작업을 분리 처리하는 병렬 구조를 구현할 수 있다.
+- Executors.newFixedThreadPool) vs Executors.newVirtualThreadPerTaskExecutor0
+- 동시성 구조 설계 시 고려해야 할 자원 사용/스레드 수/작업 큐 등 분석
+- 다중 요청 시뮬레이션 + 성능 비교
+3. 실행 결과를 기반으로 Virtual Thread의 장단점을 분석하고, 실전 환경에 적합한 스레드 모델을 선택할 수 있다.
+- 둘을 활용해 실시간 모니터링 ( 실행 시간, 스레드 수, 메모리 사용량 등 비교 분석)
+4. Java의 Socket과 ServerSocket을 활용하여 기본적인 TCP 동신 구조를 설계하고 구현할 수 있다.
+
+
+
+
 
 - etc : 문제
 - notice : 정리

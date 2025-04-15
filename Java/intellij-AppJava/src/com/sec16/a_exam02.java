@@ -9,7 +9,7 @@ public class a_exam02 extends Thread{
 
     @Override
     public void run() {
-        for (int i = 1; i < 50; i++) {
+        for (int i = 1; i < 300000; i++) {
             System.out.println("나 스레드야!!!! 💁 -> : "+getName()+i);
         }
     }

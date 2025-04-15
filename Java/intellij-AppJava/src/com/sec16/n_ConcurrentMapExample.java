@@ -6,7 +6,8 @@ import java.util.Map;
 // [ConcurrentHashMap] 스레드 안전한 Map
 public class n_ConcurrentMapExample {
     public static void main(String[] args) throws InterruptedException {
-        Map<String, Integer> map = new ConcurrentHashMap<>();
+        Map<String, Integer> map = new ConcurrentHashMap<>(); //ThreadGroup -> 부모와 자식 o /ConcurrentHashMap 팀, 조원
+
 
         Runnable writer = () -> {
             for (int i = 0; i < 5; i++) {
