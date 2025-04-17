@@ -312,9 +312,31 @@ Day33 4월 15일
 - 둘을 활용해 실시간 모니터링 ( 실행 시간, 스레드 수, 메모리 사용량 등 비교 분석)
 4. Java의 Socket과 ServerSocket을 활용하여 기본적인 TCP 동신 구조를 설계하고 구현할 수 있다.
 
+Day34 4월 16일=========
+1. Java의 Socket과 ServerSocket을 활용하여 기본적인 TCP 통신 구조를 설계하고 구현할 수 있다.
+Socket, ServerSocket, DatagramSocket 등의 클래스 이해, TCP(연결형), UDP(비연결형) 구조 비교 , 클라이언트-서버 간 메시지 송수신 실습
+2. 멀티 클라이언트 처리를 위한 스레드 기반의 서버 구조를 설계할 수 있다.
+접속당 1스레드 구조 vs 스레드풀 구조, 메시지 브로드캐스트 구현, 동시 접속 처리 시 고려할 예외/자원 관리 등 실습
+3. 자바의 InetAddress 및 포트, IP 기반 주소 체계를 이해하고 활용할 수 있다.
+InetAddress, getHostName, getHostAddress0 등 주요 AP 사용, 도메인과 IP 주소 매핑, 포트 충돌, 바인딩 오류 등 실습 기반 디버깅
+4. 객체 직렬화를 통한 소켓 기반 객체 전송 구조를 구현할 수 있다.
+Objectoutputstream / ObjectInputstream 활용 , 사용자 정의 객체 전송 및 수신, 직렬화와 네트워크 지연, 보안 고려사항 등 분석
 
+Day34 4월 16일====
+1. Java의 Socket과 ServerSocket을 활용하여 기본적인 TCP 통신 구조를 설계하고 구현할 수 있다.
+Socket, ServerSocket, DatagramSocket 등의 클래스 이해, TCP(연결형), UDP(비연결형) 구조 비교, 클라이언트-서버 간 메시지 송수신 실습
+2. 멀티 클라이언트 처리를 위한 스레드 기반의 서버 구조를 설계할 수 있다.
+접속당 1스레드 구조 vs 스레드풀 구조, 메시지 브로드캐스트 구현, 동시 접속 처리 시 고려할 예외/자원 관리 등 실습
+3. 자바의 InetAddress 및 포트, IP 기반 주소 체계를 이해하고 활용할 수 있다.
+InetAddress, getHostName, getHostAddress0 등 주요 API 사용, 도메인과 IP 주소 매핑, 포트 충돌, 바인딩 오류 등 실습 기반 디버깅
+4. 객체 직렬화를 통한 소켓 기반 객체 전송 구조를 구현할 수 있다.
+ObjectoutputStream / ObjectInputStream 활용 , 사용자 정의 객체 전송 및 수신, 직렬화와 네트워크 지연, 보안 고려사항 등 분석
 
-
+Day35 4월 17일  =================
+1. 채팅 서버/클라이언트의 기능 확장 및 구조 개선을 구현할 수 있다.
+2. Virtual Thread를 활용하여 경량 스레드 기반 네트워크 구조를 설계할 수 있다.
+3. Selector 및 NIO 기반의 논블로킹 네트워크 구조를 이해하고 비교할 수 있다.
+4. Wireshark 를 활용해서 네트워크를 상태 정보를 리턴 받을 수 있다
 
 - etc : 문제
 - notice : 정리
