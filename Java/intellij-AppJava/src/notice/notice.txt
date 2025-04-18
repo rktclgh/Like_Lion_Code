@@ -338,6 +338,28 @@ Day35 4월 17일  =================
 3. Selector 및 NIO 기반의 논블로킹 네트워크 구조를 이해하고 비교할 수 있다.
 4. Wireshark 를 활용해서 네트워크를 상태 정보를 리턴 받을 수 있다
 
+
+
+Day36 4월 18일 =======
+1. Virtual Thread 기반의 고성능 네트워크 서버 구조들 설계하고, 동시성 모델을 기존 방식과 비교 분석할 수 있다.
+ServerSocketaccept() 이후 요청마다 VirtualThread로 처리 Echoserver, TimeServer, FileTransferServer에 가상 스레드 적용
+2. 네트워크 트래픽 및 동신 흐름을 Wireshark로 실시간 분석하고, 동신 프로토콜 설계와 디버깅에 활용할 수 있다.
+tcp port == 9500 필터로 Java 서버/클라이언트 모니터링, 메시지 포맷 (예: SEND:홍길동:안녕하세요) 구조 확인 , 패킷 전송 시점, 재전송 여부, RTT 확인
+3. Executor 및 VirtualThread를 사용하여 작업 처리 병화를 구현할 수 있다
+Thread.startVirtualThread() 또는 Executors.newirtualThreadPerTaskExecutor()
+ExecutorService 활용 여러 잡업의 스레드 풀. submit(), shutdown() 으로 종료
+
+
+
+
+
+
+
+
+
+
+
+
 - etc : 문제
 - notice : 정리
 
