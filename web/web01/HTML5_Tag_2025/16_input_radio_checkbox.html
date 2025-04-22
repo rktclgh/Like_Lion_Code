@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><title>Radio & Checkbox</title>
+
+  <style>
+    label.selected{
+      color: blueviolet;
+      background-color: gold;
+    }
+  </style>
+
+</head>
+<body>
+<form action="#" method = "get">
+  <p>성별:</p>
+  <label class = "selected"><input type="radio" name="gender" value="male" onclick="myfunc(event)"> 남성</label>
+  <label class = "selected"><input type="radio" name="gender" value="female" onclick="myfunc(event)"> 여성</label>
+
+  <p>관심 분야:</p>
+  <label class = "selected"><input type="checkbox" name="area" value="html" onclick="myfunc(event)"> HTML</label>
+  <label class = "selected"><input type="checkbox" name="area" value="css" onclick="myfunc(event)"> CSS</label>
+</form>
+<script>
+  function myfunc(e){
+   // 클릭했을 때 value를 console에 출력해보자.
+    console.log("클릭한 값을 출력해보자 value: ",e.target.value);
+
+    //클릭한 라디오 버튼의 label에 '선택됨!!' 텍스트를 추가해보자
+    const label = e.target.parentNode;
+    // label.textContent = label.textContent.trim().replace("선택됨!!",'')+ ' 선택됨!';
+    label.textContent = "선택했어!!!!"
+
+
+  }
+</script>
+</body></html>

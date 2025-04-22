@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><title>리스트 태그</title>
+
+<style>
+ul.icon li::before{
+    /* list-style-type: square;  */
+
+        content: "❤️"; /* 유니코드 기호 */
+}
+ul.icon li::after{
+    /* list-style-type: square;  */
+
+        content: "🙈"; /* 유니코드 기호 */
+}
+li{
+    color: blue; /* 글자 색상 */
+    margin-bottom: 8px; /* 아래 여백 */
+
+}
+ol li::before{
+    list-style-type: lower-roman; /* 소문자 로마 숫자 */
+    content: "🐥";
+}
+
+</style>
+</head>
+<body>
+<h3>순서 없는 리스트</h3>
+<ul class ="icon">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JS</li>
+</ul>
+<h3>순서 있는 리스트</h3>
+<ol>
+    <li>기획</li>
+    <li>설계</li>
+    <li>구현</li>
+</ol>
+
+<h3>중첩 리스트</h3>
+<ol>
+    <li>기획</li>
+    <li>설계</li>
+    <li>구현</li>
+    <li>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+        </ul>
+    </li>
+</ol>
+</body></html>

@@ -1,0 +1,19 @@
+/* 한 페이지에서 재활용 */
+.myclass{
+    background-color: azure;
+    padding: 20px;
+}
+
+/* id = myhr     고유성, 한페이지에 한번만 사용   ,
+   #id{} 는 .class{} 보다 우선순위기 높다.
+   태그선택자 body{} ,
+   속성선택자. input[type="text"] { }
+
+   #id  >  속성선택자  > .class > 태그 선택자.
+*/
+#myhr{
+    border: 1;
+    height: 2px;
+    background-color: blue;
+    width:50% ;
+}

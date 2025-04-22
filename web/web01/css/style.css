@@ -1,0 +1,15 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font: 1.5em/1.5em Arial, sans-serif;
+    background: blanchedalmond;
+    text-align: center;
+    padding: 50px;
+
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
