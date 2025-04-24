@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Display와 Position 속성 실습</title>
+  <style>
+    /* case1 :  display: inline-block → 블록처럼 크기 지정 가능 + 인라인처럼 옆에 배치됨 */
+    .box1 {
+      display: inline-block;
+      background: orange;
+      padding: 10px;
+    }
+
+    /* case2: display: none → 요소를 화면에서 숨기고, 자리도 제거함 */
+    .box-none {
+      display: none;
+      background: red;
+      color: white;
+      padding: 10px;
+    }
+
+    /*  position 속성  */
+
+    /* case3: position: static → 기본 위치. top/left/right/bottom 무시됨 */
+    .box-static {
+      position: static;
+      background: lightgray;
+      padding: 10px;
+    }
+
+    /* case 4:  position: relative → 자기 원래 위치 기준으로 이동 가능 */
+    .box-relative {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      background: skyblue;
+      padding: 10px;
+    }
+
+    /* case 5:  position: absolute → 가장 가까운 위치 지정 조상 기준 */
+    .box-absolute {
+      position: absolute;
+      top: 50px;
+      left: 150px;
+      background: teal;
+      color: white;
+      padding: 10px;
+    }
+
+    /* case 6:  position: fixed → 브라우저 화면 기준 고정 */
+    .box-fixed {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background: purple;
+      color: white;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2> display 속성 예제</h2>
+  <div class="box1">display: inline-block</div>
+  <!-- <div class="box-none">display: none (보이지 않음)</div> -->
+
+  <h2> position 속성 예제</h2>
+  <div class="box-static">position: static</div>
+  <div class="box-relative">position: relative</div>
+  <div class="box-absolute">position: absolute</div>
+  <div class="box-fixed">position: fixed</div>
+
+</body>
+
+</html>
+
+<!--
+display
+- inline :줄바꿈 없이 한 줄에 표시, 크기 조절 불가
+- block : 한 줄 차지, 너비 100%, margin/padding 가능
+- inline-block :줄바꿈 안 하면서도 블록처럼 크기 조절
+- none  : 화면과 공간 모두에서 숨김
+- flex :  플렉스 컨테이너로 지정, 내부 요소를 수평/수직 정렬하고 공간 배분을 유연하게 조절할 수 있음.
+- inline-flex : flex처럼 동작하지만 자체는 인라인 요소처럼 처리되어 줄바꿈이 안 됨.
+- grid : 2차원 그리드 레이아웃을 위한 컨테이너로 지정, 행과 열 단위로 자식 요소 배치 가능.
+- inline-grid : grid처럼 동작하지만 자체는 인라인 요소처럼 처리되어 줄바꿈이 없음.
+- flow-root: 새로운 Block Formatting Context (BFC) 생성한다.
+- revert : 브라우저 기본값으로 세팅
+- revert-layer : css에서만 세팅
+
+position
+- static 기본 위치 (기준 없음, 위치 이동 불가)
+- relative 자기 원래 위치 기준으로 이동 가능
+- absolute 가장 가까운 위치 지정 조상 기준
+- fixed 브라우저 뷰포트 기준 고정
+-->

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><title>반복문</title>
+
+<style>
+  body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+  }
+  .result {
+    margin: 20px; padding :10px; background-color: bisque;
+  }
+</style>
+
+
+</head>
+<body>
+  <h2>숫자를 입력하고 버튼을 클릭해보자</h2>
+  <input type = "number" id = "number" placeholder="숫자 입력하세요">
+  <button onclick = "runloop()">클릭</button>
+
+  <h3>for 반복문 결과</h3>
+  <div id = "whileResult" class = "result"></div>
+  <script>
+
+
+    function runloop() {
+    const num = Number(document.getElementById("number").value);
+
+      if(isNaN(num) || num < 0){
+        alert("숫자입력 잘해봐")
+        return;
+      }
+    // for 반복문
+
+      let forOutout = "";
+      for (let i = 1; i <= num; i++) {
+        forOutout += i+" ";
+      }
+      document.getElementById("forResult").textContent = forOutout.trim();
+      
+      //while 반복
+
+      let whileOutout = "";
+      let j = 1;
+      while (j < num) {
+        whileOutout += j + " ";
+        j++;
+      }
+
+      document.getElementById("whileResult").textContent = whileOutout.trim();
+
+    }
+
+
+    // for (let i = 1; i <= 5; i++) {
+    //   document.write("반복 " + i + "<br>");
+    // }
+  </script>
+</body>
+</html>

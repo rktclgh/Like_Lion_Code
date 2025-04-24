@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>z-index와 레이어</title>
+  <style>
+    .box { position: absolute; width: 100px; height: 100px; }
+    .red { background: red; left: 50px; top: 50px; z-index: 1; }
+    .green { background: green; left: 80px; top: 80px; z-index: 2; }
+    .blue { background: blue; left: 110px; top: 110px; z-index: 3; }
+  </style>
+</head>
+<body>
+  <div class="box red"></div>
+  <div class="box green"></div>
+  <div class="box blue"></div>
+</body>
+</html>

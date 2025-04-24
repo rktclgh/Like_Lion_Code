@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>선택자 조합의 우선순위 확인</title>
+  <style>
+    /* .outer 클래스를 가진 div 안의 p태그를 선택해서 속성 변경 */
+   :where(h1,h2,h3) {
+  color: orange;
+}
+
+/* .outer 클래스가 아닌 div 안의 p 태그 선택 */
+div:not(.outer) p {
+  color: lime;
+}
+
+  </style>
+</head>
+<body>
+
+
+  <h1>11111</h1>
+  <h2>22222</h2>
+  <h3>33333</h3> 
+
+<div class = "outer">
+
+  <p> 안녕, 오후야 졸리다</p>
+</div>
+<div>
+
+
+
+  <p>클래스 적용 x</p>
+</div>
+
+
+</body>
+</html>

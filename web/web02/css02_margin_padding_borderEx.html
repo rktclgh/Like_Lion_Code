@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>여백과 테두리</title>
+  <style>
+    .parent {
+      margin: 30px;
+      /* <'margin-top'>{1,4}
+      
+        margin: 10px 20px 위아래 10 좌우 20
+        margin : 10px 20px 30px 위10 좌우 20 아래 30
+        margin : 10px 20px 30px 40px 위 오른쪽 아래 왼쪽
+      */
+
+      padding: 20px;
+      border: 2px dotted #888;
+      background-color: #e0f7fa;
+    }
+
+    .inherit
+    {
+        border: inherit;
+    }
+    .initial
+    {
+        border: initial;
+    }
+
+    .unset
+    {
+        border: unset;
+    }
+
+    .demo{
+        padding: 10px; margin :10px;
+        background-color: rgb(247, 28, 156);
+    }
+  </style>
+</head>
+<body>
+
+<div class = "parent"> 부모박스
+    <div class = "demo inherit">border inherit; 부모 border 상속확인</div>
+    <div class = "demo initial">border:initial; 브라우저 기본값</div>
+    <div class = "demo unset">border: unset; (상속불가 -> 기본값으로 적용)</div>
+</div>
+
+
+
+</body>
+</html>

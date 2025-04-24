@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>반복문 출력 애니메이션</title>
+  <style>
+    body {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 16px;
+    }
+    .result {
+      margin: 20px;
+      padding: 10px;
+      background-color: bisque;
+      min-height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h2>숫자를 입력하고 버튼을 클릭해보세요</h2>
+  <input type="number" id="number" placeholder="숫자 입력하세요">
+  <button onclick="runloop()">클릭</button>
+
+  <h3>결과</h3>
+  <div id="result" class="result"></div>
+
+  <script>
+    function Output(eId, text) {
+      const target = document.getElementById(eId);
+      target.textContent = ""; // 초기화
+
+      const chars = text.trim().split(" ");
+      let i = 0;
+
+      const interval = setInterval(() => {
+        if (i < chars.length) {
+          target.textContent += chars[i] + " ";
+          i++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 200); // 속도는 원하면 조절 가능
+    }
+
+    function runloop() {
+      const num = Number(document.getElementById("number").value);
+      if (isNaN(num) || num < 1) {
+        alert("양의 정수를 입력해주세요.");
+        return;
+      }
+
+      let numbers = "";
+      for (let i = 1; i <= num; i++) {
+        numbers += i + " ";
+      }
+
+      Output("result", numbers);
+    }
+  </script>
+</body>
+</html>

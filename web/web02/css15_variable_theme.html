@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 변수와 테마</title>
+  <style>
+    :root {
+      --main-bg: white;
+      --main-text: black;
+    }
+    body {
+      background-color: var(--main-bg);
+      color: var(--main-text);
+      transition: 0.3s;
+    }
+    .dark {
+      --main-bg: #121212;
+      --main-text: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS 변수 기반 테마</h1>
+  <button onclick="toggleTheme()">테마 전환</button>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>

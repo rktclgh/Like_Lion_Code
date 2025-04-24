@@ -4,13 +4,45 @@
   <meta charset="UTF-8">
   <title>색상 및 글꼴 실습</title>
   <style>
+    /* p태그에 각 클래스를 접목 해보자.
+    1. .note01 -> 노란색 배경, 왼쪽 테두리 골드
+    2. .note02 -> 하늘색 배경, 왼쪽 네이비 테두리
+    3. .note03 -> 빨강 글씨, 텍스트 굵개
+    */
+
+    .note01{
+        background-color: yellow;
+        border-left: 5px solid gold;
+    }
+
+    .note02{
+        background-color: lightblue;
+        border-left: 5px solid navy;
+    }
+    .note03{
+        color: red;
+        font-weight: bold;
+    }
+
+
+    #main-title{
+      color: blueviolet;
+      text-align: center;
+    }
+
+
+
     body { font-family: 'Arial', sans-serif; color: #333; background: #f9f9f9; }
     h1 { color: navy; }
     p { color: #555; font-size: 18px; }
   </style>
 </head>
 <body>
-  <h1>글꼴과 색상</h1>
-  <p>이 문장은 기본 텍스트 스타일입니다.</p>
+  <h1 id = "main-title">글꼴과 색상</h1>
+  <p class="note01">이 문장은 기본 텍스트 스타일입니다.</p>
+  <p class="note02">이 문장은 기본 텍스트 스타일입니다.</p>
+  <p class="note03">이 문장은 기본 텍스트 스타일입니다.</p>
+
+
 </body>
 </html>

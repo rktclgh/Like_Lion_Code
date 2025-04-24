@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>고급 선택자 실습</title>
+  <style>
+    li:first-child { color: red; }
+    li:nth-child(odd) { background-color: #f0f0f0; }
+    input[type="text"] { border: 2px solid blue; }
+    p:not(.highlight) { color: gray; }
+  </style>
+</head>
+<body>
+  <h2>고급 선택자 실습</h2>
+  <ul>
+    <li>첫 번째 항목</li>
+    <li>두 번째 항목</li>
+    <li>세 번째 항목</li>
+  </ul>
+  <input type="text" placeholder="텍스트 입력">
+  <input type="checkbox"> 체크박스
+  <p>일반 문단</p>
+  <p class="highlight">강조 문단</p>
+</body>
+</html>
