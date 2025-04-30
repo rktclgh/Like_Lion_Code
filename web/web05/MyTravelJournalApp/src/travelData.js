@@ -17,6 +17,6 @@ export default [
     startDate: "2025-02-10",
     endDate: "2025-02-15",
     description: "도쿄의 현대적이면서 전통적인 매력을 모두 경험했습니다.",
-    imageUrl: process.env.PUBLIC_URL + "/images/tokyo.jpg"
+    imageUrl: process.env.PUBLIC_URL + "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npp3mbJhDj3zXH5hYByelXS6nS8ZqjY7pQ7RBbG2LjdAy3C5P5FVLZK6Xs2Sxt6HKb-xAFE_mjY3RVvv55h9nW2Cr2uK7cMf_TEGB-o4dTJwcSFew_R1R7l20NqRVLTkpClPGEvIw=w408-h544-k-no"
   }
 ];
