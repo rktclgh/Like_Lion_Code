@@ -9,9 +9,9 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+// app.listen(port, () => {
+//   console.log(`Example app listening on port ${port}`)
+// })
 
 //1.  미들웨어 등록 
 app.use(cors());
@@ -55,11 +55,22 @@ app.post('/api/time', (req, res) => {
 });
 
 
+// POST 요청 처리(예시 5: 클라이언트에서 이름을 받아 텍스트 전송)
+//React_Basic/react09_FormSubmit.jsx
+
+app.post('/api/name', (req, res) => {
+const {text} = req.body;
+console.log('Received name:', text);
+res.json({ msg: `서버가 받은 이름: ${text}` });
 
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+});
+
+
+
+// app.listen(port, () => {
+//   console.log(`Example app listening on port ${port}`)
+// })
 
 
 

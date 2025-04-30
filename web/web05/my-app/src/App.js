@@ -11,6 +11,7 @@ import Counter from "./React_Basic/react03_UseState";
 import SkillList from "./React_Basic/react06_ListRender";
 import Clock from "./React_Basic/react07_UseEffect";
 import {MyTime, MyUser} from "./React_Basic/react08_FetchData";
+import {ServerFormSubmit} from "./React_Basic/react09_FormSubmit";
 function App()
 {
 
@@ -27,6 +28,8 @@ switch(CurrentComponent)
     case "React06": return <React06 />;  
     case "React07": return <React07 />; 
     case "React08": return <React08 />;   
+    case "React08": return <React08 />;   
+    case "React09": return <React09 />;
 
 }
 
@@ -43,6 +46,8 @@ switch(CurrentComponent)
      <button onClick={() => setCurrentComponent("React06")}>React06</button>
      <button onClick={() => setCurrentComponent("React07")}>React07</button>
      <button onClick={() => setCurrentComponent("React08")}>React08</button>
+     <button onClick={() => setCurrentComponent("React09")}>React09</button>
+
      </div>
 
      <div>
@@ -53,7 +58,13 @@ switch(CurrentComponent)
 
 }
 
-
+function React09()
+{
+  return(
+    // <FormSubmit />
+  <ServerFormSubmit />
+  )
+}
 
 function React08()
 {
