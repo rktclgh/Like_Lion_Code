@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><title>반복문</title></head>
+<body>
+
+<button onclick="Test()">버튼01</button><br>
+<button id="myButton">버튼02</button><br>
+<div id="result"></div>
+
+<script>
+  const resultDiv = document.getElementById('result');
+  const myButton = document.getElementById('myButton');
+
+  function Test() {
+    resultDiv.innerHTML = ''; // 초기화
+    for (let i = 1; i <= 5; i++) {
+      resultDiv.innerHTML += "반복 " + i + "<br>"; // 오타 수정
+    }
+  }
+
+  myButton.addEventListener("click", Test);
+
+  // 초기 로딩 시 즉시 실행
+  window.onload = Test;
+</script>
+</body>
+</html>

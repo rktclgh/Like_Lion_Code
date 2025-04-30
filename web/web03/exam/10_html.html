@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>class연습</title>
+</head>
+
+<body>
+    <h2>목록</h2>
+    <ul id="p_list"></ul>
+
+    <script type="module">
+        import { Person } from './10_class.js';
+
+        const p_list = [new Person('111', '111', '1111'), new Person('222', '222', '2222'), new Person('333', '333', '333')
+        ];
+
+        const ul = document.getElementById("p_list");
+
+        p_list.forEach((p, index) => {
+            const li = document.createElement("li");
+            li.textContent = p.toString();
+            ul.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>

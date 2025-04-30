@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>radio demo</title>
+    <style>
+        textarea {
+            height: 25px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <form>
+        <input type="radio" name="asdf" value="Option 1">
+        <input type="radio" name="asdf" value="Option 2">
+        <input type="text">
+        <select>
+            <option>Option</option>
+        </select>
+        <textarea>
+            OptionA
+            OpttionB
+            optionC
+        </textarea>
+        <button type="button" id="checkRadio">결과 확인</button>
+    </form>
+    <div id="info"></div>
+
+    <script>
+        //1. 모든 라디오 버튼을 노랑색배경  + 빨강색 테두리를 주자
+        var input = $("form input:radio")
+            .wrap("<span></span>")
+            .parent()
+            .css({
+                background: "yellow",
+                border: "3px red solid"
+            });
+
+        //2. div#info 라디오 버튼의 개수를 표시하자.
+        $("#info").text("라디오 버튼수 :" + input.length).css("color", "red");
+
+
+
+        // 3. Prevent form submission 폼의 기본 제출을 막자
+        $("form").on("submit", function (event) {
+            event.preventDefault();
+        });
+
+        //4. "결과 확인" 버튼을 클릭시, 선택된 라디오 값을 출력 해보자 
+        $("#checkRadio").on("click", function () {
+            const checked = $("input📻checked").val();
+            if (checked) {
+                $("#info").text("선택한 값 :" + checked);
+
+            } else {
+                $("#info").text("없어 :" + checked);
+            }
+
+
+            const checked02 = $("select").val();
+            if( checked02){
+                $("#info").text("선택한 값 :" + checked02).join("   <   ");
+            }
+
+            else
+            {
+                $("#info").text("없어 :" + checked02);
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>
