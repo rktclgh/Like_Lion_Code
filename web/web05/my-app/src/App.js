@@ -12,6 +12,7 @@ import SkillList from "./React_Basic/react06_ListRender";
 import Clock from "./React_Basic/react07_UseEffect";
 import {MyTime, MyUser} from "./React_Basic/react08_FetchData";
 import {ServerFormSubmit} from "./React_Basic/react09_FormSubmit";
+import React11_Router from "./React_Basic/React11_Router";
 function App()
 {
 
@@ -30,6 +31,7 @@ switch(CurrentComponent)
     case "React08": return <React08 />;   
     case "React08": return <React08 />;   
     case "React09": return <React09 />;
+    case "React11": return <React11 />;
 
 }
 
@@ -47,7 +49,7 @@ switch(CurrentComponent)
      <button onClick={() => setCurrentComponent("React07")}>React07</button>
      <button onClick={() => setCurrentComponent("React08")}>React08</button>
      <button onClick={() => setCurrentComponent("React09")}>React09</button>
-
+     <button onClick={() => setCurrentComponent("React11")}>React11</button>
      </div>
 
      <div>
@@ -56,6 +58,13 @@ switch(CurrentComponent)
     </>
   );
 
+}
+
+function React11()
+{
+  return(
+  <React11_Router />
+  )
 }
 
 function React09()
