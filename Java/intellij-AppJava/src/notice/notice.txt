@@ -420,7 +420,36 @@ Day45 5월 1일 ================================================================
 2. 저장된 내용을 통해 CRUD를 구현하고 FE 와 BE흐름을 이해하고 구현할 수 있다.
 3. 브라우저 상위 객체를 통해 레이아웃 분할 화면을 설계 할 수 있다.
 4. FE. BE 동합 구조들 설계할 수 있다.
-=======================================================================
+
+Day51 5월 12일=========================================================
+1. GoF 디자인 패턴 23가지를 Creational, Structural, Behavioral 유형으로 구분하여 그 목적과 사용 시점을 이해할 수 있다.
+2. 주어진 요구사항에 맞는 디자인 패턴을 식별하고, 해당 패턴을 활용해 유연하고 확장 가능한 객체지향 구조를 설계할 수 있다.
+ex) 다양한 객체 생성을 캡슬화하기 위해 Factory Method 패턴을 적용
+3. 디자인 패턴 간의 관계와 차이점을 이해하고, 적절한 조합을 통해 재사용성과 유지보수성이 높은 아키텍처를 설계할 수 있다.
+ex) MVC 구조에서 Strategy + Observer 패턴을 결합하여 화면과 모델을 느슨하게 연결
+4. GoF 디자인 패턴을 Java 또는 Spring 기반 프로젝트에 적용하여 실제 소프트웨어 개발에 활용할 수 있다.
+온라인 리소스
+
+Refactoring.Guru: https://refactoring.guru/design-patterns
+GeeksforGeeks: https://www.geeksforgeeks.org/gang-of-four-gof-design-patterns/
+Spring Framework Guru: https://springframework.guru/gang-of-four-design-patterns/
+Sourcemaking: http://sourcemaking.com/design_patterns
+Patterns.dev: https://www.patterns.dev/
+Wikipedia: https://en.wikipedia.org/wiki/Design_Patterns
+Coursera: https://www.coursera.org/articles/gang-of-four-design-patterns
+PDF 예시: https://edeleastar.github.io/design-patterns/topic00/pdf/c-logica-gof-catalogue.pdf
+
+
+
+
+
+
+
+
+
+
+
+
 
 - etc : 문제
 - notice : 정리
