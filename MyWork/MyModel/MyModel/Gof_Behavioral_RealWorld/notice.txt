@@ -1,0 +1,27 @@
+ 프로젝트명: GoF_Behavioral_RealWorld
+
+ 패키지 구조 및 설명:
+1. com.sec01.ChainOfResponsibility - 요청을 처리할 수 있는 객체를 체인으로 연결
+2. com.sec02.Command - 요청을 캡슐화하여 다양한 방식으로 실행
+3. com.sec03.Interpreter - 언어 규칙을 클래스 구조로 표현하고 해석
+4. com.sec04.Iterator - 집합 객체의 내부 구조에 상관없이 요소 순회
+5. com.sec05.Mediator - 객체 간 직접 통신 대신 중재자 객체를 통한 통신
+6. com.sec06.Memento - 객체 상태를 저장하고 복원
+7. com.sec07.Observer - 상태 변화 시 관련 객체에 알림
+8. com.sec08.State - 객체 상태에 따라 동작을 변경
+9. com.sec09.Strategy - 알고리즘을 캡슐화하고 동적으로 교체 가능
+10. com.sec10.TemplateMethod - 알고리즘 뼈대를 상위 클래스에 정의
+11. com.sec11.Visitor - 객체 구조를 변경하지 않고 기능 추가
+
+디렉토리 구조:
+└── com/sec01/ChainOfResponsibility/TestChainOfResponsibility.java
+└── com/sec02/Command/TestCommand.java
+└── com/sec03/Interpreter/TestInterpreter.java
+└── com/sec04/Iterator/TestIterator.java
+└── com/sec05/Mediator/TestMediator.java
+└── com/sec06/Memento/TestMemento.java
+└── com/sec07/Observer/TestObserver.java
+└── com/sec08/State/TestState.java
+└── com/sec09/Strategy/TestStrategy.java
+└── com/sec10/TemplateMethod/TestTemplateMethod.java
+└── com/sec11/Visitor/TestVisitor.java

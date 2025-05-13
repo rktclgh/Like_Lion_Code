@@ -441,7 +441,13 @@ PDF 예시: https://edeleastar.github.io/design-patterns/topic00/pdf/c-logica-go
 
 
 
-
+Day52 5월 13일
+1. 행동 패턴과 DI(Dependency Injection) 개념의 차이와 연관성을 이해하고 설명할 수 있다.
+2. Spring Framework에서의 미를 통해 행동 패턴을 효과적으로 적용할 수 있음을 설명할 수 있다.
+3. 행동 패턴을 Java 및 Spring 기반 프로젝트에 직접 구현하고, 미를 활용하여 결합도를 낮춘 구조로 개발할 수 있다.
+4. 스프링 프레임워크의 핵심 개념인 loC(Inversion of Control)와 D(Dependency Injection)의 원리를 이해하고,
+객체 생성 및 의존성 관리를 프레임워크에 위임하는 구조를 설명할 수 있다.
+5. Bean 설정 방식(XML, Java Config, Annotation 기반)의 차이점을 이해하고, XML 방식으로 구현할 수 있다.
 
 
 

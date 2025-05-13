@@ -5,6 +5,10 @@
     <groupId>com.example</groupId>
     <artifactId>your-module-name</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>Gof_Behavioral_RealWorld</module>
+    </modules>
 
     <dependencies>
         <!-- 필요한 라이브러리 추가 -->
