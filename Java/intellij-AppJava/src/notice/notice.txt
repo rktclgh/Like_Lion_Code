@@ -450,6 +450,60 @@ Day52 5월 13일
 5. Bean 설정 방식(XML, Java Config, Annotation 기반)의 차이점을 이해하고, XML 방식으로 구현할 수 있다.
 
 
+Day54  5월 15일
+==============================================================
+
+1. Java Config 기반 DI 설정 방식의 개념을 이해하고,
+   @Configuration과 @Bean 어노테이션을 사용하여 객체 생성 및 의존성 주입을 구현할 수 있다.
+
+2. Java Config 및 Annotation 기반에서
+   @Autowired, @Value, @Qualifier 등의 어노테이션을 사용하여
+   다양한 타입(String, int, List, Map 등)의 값을 주입할 수 있다.
+
+3. Groovy Bean DSL의 문법과 선언 방식을 이해하고,
+   기존 XML 기반 Bean 설정과의 차이점을 설명할 수 있다.
+
+   - beanName(ClassName, 생성자 전달값...) { ... }
+   - propertyName = value     → setter
+   - ref(beanName)            → 다른 빈 참조
+   - ClassName param → ...    → 중첩 Bean 정의 (클로저 사용)
+
+4. Java Config 기반에서 다양한 Bean 스코프(singleton, prototype, request, session 등)과
+   @Scope 어노테이션을 활용하여 Bean의 생성/관리 범위를 제어할 수 있다.
+
+
+Day55  5월 16일
+==============================================================
+
+1. @ComponentScan, @Component, @Service, @Repository 등의 어노테이션을 사용하여
+   자동 컴포넌트 스캔 및 DI 구성을 할 수 있다.
+
+2. Spring 프로젝트에서 JavaConfig, Properties 설정, Component Scan, DI 어노테이션을 통합하여
+   구조를 설계할 수 있다.
+
+3. 프로퍼티 파일을 활용한 외부 설정 주입 방식을 이해하고,
+   @PropertySource, @Value, Environment를 사용하여 설정값을 유연하게 주입할 수 있다.
+
+4. JDBCTemplate 기반 DAO 클래스에서 @Repository, @Autowired 등의 어노테이션을 사용하여 의존성을 주입할 수 있다.
+
+
+5. JavaConfig 또는 ComponentScan을 활용해 JDBCTemplate 객체를 Bean으로 등록하고, 이를 서비스 계층에서 재사용할 수 있다.
+
+Day56 5월 19일==================================================================
+1. AOP(Aspect Oriented Programming)의 개념과 핵심 용어(Aspect, Advice, Pointcut, JoinPoint)을 이해하고 설명할 수 있다.
+2. XML 기반 AOP 설정을 통해 비즈니스 로직과 공동 관심사를 분리하고, 기능 실행 전후에 부가기능을 적용할 수 있다.
+3. @Aspect 어노테이션을 활용한 AOP 구현 방식을 이해하고, 다양한 Advice(@Before, @After, @Around)를 직접 적용할 수 있다.
+4. JavaConfig 기반 설정에서 AOP 설정 클래스(@Configuration, @EnableAspectAutoProxy)와 Aspect 클래스를 분리하여 유연한 구조로 구성할 수 있다.
+
+Day57 5월 20일 ==============================================================================================
+
+1. Spring 프레임워크에서 제공하는 선언적 트랜잭션(@Transactional)의 작동 원리를 이해하고, 프로그래밍 방식과의 차이를 설명할 수 있다.
+
+2. 트랜잭션의 전짜 속성(Propagation)과 격리 수준(Isolation Level)의 의미와 사용 사례를 설명할 수 있다.
+
+3. @Transactional을 서비스 계층에 적용하여 데이터의 일관성과 무결성을 보장하는 실습을 수행할 수 있다.
+
+4. AOP 기반으로 구현된 Spring의 트랜잭션 처리 방식을 이해하고, 예외 발생 시 롤백 여부를 확인하며 테스트할 수 있다
 
 
 
