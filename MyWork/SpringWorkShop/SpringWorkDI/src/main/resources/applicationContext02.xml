@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 직원 정의 -->
+    <bean id="employee1" class="com.work02.sec02.Employee">
+        <constructor-arg value="홍길동"/>
+        <constructor-arg value="과장"/>
+    </bean>
+
+    <bean id="employee2" class="com.work02.sec02.Employee">
+        <constructor-arg value="김영희"/>
+        <constructor-arg value="사원"/>
+    </bean>
+
+    <bean id="employee3" class="com.work02.sec02.Employee">
+        <constructor-arg value="이철수"/>
+        <constructor-arg value="팀장"/>
+    </bean>
+
+    <!-- Service + 부서별 직원 매핑 -->
+    <bean id="employeeService" class="com.work02.sec02.EmployeeService">
+        <property name="departmentMap">
+            <map>
+                <entry key="개발부">
+                    <list>
+                        <ref bean="employee1"/>
+                        <ref bean="employee2"/>
+                    </list>
+                </entry>
+                <entry key="기획부">
+                    <list>
+                        <ref bean="employee3"/>
+                    </list>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+</beans>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Student Bean 정의 -->
+    <bean id="student1" class="com.work02.sec01.Student">
+        <constructor-arg value="홍길동"/>
+        <constructor-arg value="20"/>
+        <constructor-arg value="175"/>
+        <constructor-arg value="65"/>
+    </bean>
+
+    <bean id="student2" class="com.work02.sec01.Student">
+        <constructor-arg value="김영희"/>
+        <constructor-arg value="21"/>
+        <constructor-arg value="160"/>
+        <constructor-arg value="50"/>
+    </bean>
+
+    <bean id="student3" class="com.work02.sec01.Student">
+        <constructor-arg value="이철수"/>
+        <constructor-arg value="22"/>
+        <constructor-arg value="180"/>
+        <constructor-arg value="72"/>
+    </bean>
+
+    <bean id="student4" class="com.work02.sec01.Student">
+        <constructor-arg value="박민수"/>
+        <constructor-arg value="23"/>
+        <constructor-arg value="165"/>
+        <constructor-arg value="58"/>
+    </bean>
+
+    <!-- StudentService Bean 정의 -->
+    <bean id="studentService" class="com.work02.sec01.StudentService">
+        <property name="students">
+            <list>
+                <ref bean="student1"/>
+                <ref bean="student2"/>
+                <ref bean="student3"/>
+                <ref bean="student4"/>
+            </list>
+        </property>
+    </bean>
+
+
+
+
+</beans>
