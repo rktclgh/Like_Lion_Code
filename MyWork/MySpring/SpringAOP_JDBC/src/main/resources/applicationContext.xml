@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx
+		https://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/aop
+		https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 1. DataSource 설정 -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/my_emp"/>
+        <property name="username" value="mydb"/>
+        <property name="password" value="admin1234"/>
+    </bean>
+
+    <!-- 2. JdbcTemplate 설정 -->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+
+    <!-- 3. 트랜잭션 매니저 설정 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- 4. 트랜잭션 어노테이션 사용 대신 AOP 기반 tx 설정 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="insert*" propagation="REQUIRED"/>
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- 5. 트랜잭션 AOP 적용 -->
+    <aop:config>
+        <aop:pointcut id="serviceMethods" expression="execution(* com.mydb.core.EmpService.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethods"/>
+    </aop:config>
+
+    <!-- 6. EmpDao Bean 등록 -->
+    <bean id="empDao" class="com.mydb.core.EmpDao">
+        <constructor-arg ref="jdbcTemplate"/>
+    </bean>
+
+    <!-- 7. EmpService Bean 등록 -->
+    <bean id="empService" class="com.mydb.core.EmpService">
+        <constructor-arg ref="empDao"/>
+    </bean>
+
+    <!-- 8. Aspect Bean 등록 -->
+    <bean id="logAspect" class="com.mydb.core.LogAspect"/>
+
+    <!-- 9. AOP 적용 -->
+    <aop:aspectj-autoproxy/>
+
+</beans>
