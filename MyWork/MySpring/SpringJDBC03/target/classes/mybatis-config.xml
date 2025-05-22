@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+ 
+ <!-- DB 연결 정보를 외부 프로퍼티 파일에서 로딩  -->
+  <properties resource="jdbc.properties" />
+
+  <!-- 환경설정 정보를 외부 프로퍼티에서 변수를 지정한다  DB연결 설정 -->
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>  <!--  커밋 롤백 직접사용하겠다!! -->
+      <dataSource type="POOLED">  <!-- JdbcConnection을 먼저 연결하면서 로딩하겠다. 전체 트랜잭션이 완료되면 리소스 해제  -->
+        <property name="driver" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+    
+  <!-- Sql 매퍼 등록  -->  
+  <mappers>
+    <mapper resource="com/test01/goods-mapper.xml"/>  <!-- xml 설정 리소스  /  -->    
+    <mapper class="com.test02.dao.GoodsMapper"/>  <!-- xml 설정 리소스  /  -->
+  </mappers>
+</configuration>
+
+
+

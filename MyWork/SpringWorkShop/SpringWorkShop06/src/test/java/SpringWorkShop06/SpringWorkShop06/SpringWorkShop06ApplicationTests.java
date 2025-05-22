@@ -1,10 +1,10 @@
-package SpringJDBC03.SpringJDBC03;
+package SpringWorkShop06.SpringWorkShop06;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringJdbc03ApplicationTests {
+class SpringWorkShop06ApplicationTests {
 
 	@Test
 	void contextLoads() {
