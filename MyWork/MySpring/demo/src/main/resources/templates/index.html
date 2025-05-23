@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+<h1> DEMO PAGE</h1>
+
+    <p th:text = "${msg}">안되나봅니다 허허</p>
+<!--    폼: 숫자 입력 후 서밋-->
+<form method = "post" action = "/">
+    <input type="text" name="text1" th:value="${value}">
+    <input type="submit" value="계산하기">
+</form>
+</body>
+</html>

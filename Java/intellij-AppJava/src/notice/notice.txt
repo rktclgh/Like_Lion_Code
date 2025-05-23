@@ -519,6 +519,12 @@ Day59 5월 22일==
 3. 서비스(Service) 계층의 메서드에 선언적으로 트랜잭션을 적용할 수 있다.
 4. 트랜잭션이 적용된 비즈니스 로직 실행 중 예외가 발생했을 때, 해당 트랜잭션이 의도한 대로 성공적으로 롤백되는지 확인하기 위한 테스트 코드를 작성하고 그 결과를 검증할 수 있다.
 
+Day60 5월 23일
+1. Spring Boot 가 등장하게 된 배경과 목적을 이해하고, 전통적인 Spring Framework 와의 주요 차이점 및 장단점을 비교하여 설명할 수 있다.
+2. Spring Initializr 를 통해 Maven 기반의 Spring Boot 프로젝트를 생성하고,
+기본 프로젝트 구조와 @springBootApplication 의 역할을 파악한 후 애플리케이션을 정상적으로 실행할 수 있다.
+3. spring Boot 에서 @RestController 와 @GetMapping 을 활용하여 HTTP GET 요청을 처리하는 간단한 RESTful API를 개발하고, JSON 응답을 생성하는 기본 흐름을 구현할 수 있다.
+4. Spring Boot 의 내장 웹 서버(Tomcat)의 작동 방식과 Maven 을 통한 의존성 관리 구조를 이해하고, pom.xml 파일을 편집하여 필요한 라이브러리를 추가하거나 수정할 수 있다.
 
 - etc : 문제
 - notice : 정리

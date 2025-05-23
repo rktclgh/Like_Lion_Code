@@ -1,0 +1,57 @@
+
+
+1. 웹서버 실행 후 가이드
+
+Initializing Spring DispatcherServlet 'dispatcherServlet' : @RequestMapping("/")로
+웹 요청을 받아 적절한 컨트롤러로 전달할 준비가 되었다  = 초기화가 성공적으로 완료됐다.
+
+
+2. WebApplicationContext[웹 어플리케이션 핵심 객체 ] -> TomCat Started on port 8080 -> dispatcherServlet
+
+
+3. DispatcherServlet: 웹 요청을 처리하는 Spring 의 Front Controller
+-> 톰캣이 사용자의 요청을 받으면 DispatcherServlet 으로 전달된다.
+-> @RequestMapping 을 찾아서 컨트롤러에게 라우팅(전달) 한다.
+* 들어오는 모든 웹 요청을 가로채고, 어떤 컨트롤러가 요청을 처리해야 할지 결정하고, 최종 응답을 사용자에게 보내는 역할을 한다.
+
+
+
+test03: Democontrolelr,java 을 새로 생성해서 MVC 패턴으로 분류
+    @RestController // 현재 클래스는 웹 요청을 처리하는 컨트롤러이다
+    public class DemoController {
+    @RequestMapping("/") // "/"의 경로로 들어오는 요청을 처리
+    String home() {
+    return
+    " 안녕!! 오늘 금요일이다 ";
+    }
+test04 : @RestController
+    @Controller 차이 / @RestController-> @controllen 변경후 확인
+    @RestController
+    : 반환값을 그대로 HTTP 응답본문 (JSON 등) 으로 보낸다. 템플릿을 사용하지 않는다.
+    @Controller : 반환값을 뷰 이름(view name)으로 해석하고, 해당 이름의 템플릿을 찾아 랜더링 한다.
+
+    public class DemoController {
+    @RequestMapping("/") // "/"의 경로로 들어오는 요청을 처리
+    String index {
+    return "index": // src/main/resources/templates/index.html 템플릿 뷰를 찾아 랜더링한다.
+    }
+
+
+    • spring-boot-starter-thymeleaf : 템플릿 엔진
+    src/main/resources/templates을 위치 자동 설정 해준다.
+    템플릿 파일 확장자 기본 설정
+    html
+    컨트롤러에서 "index"로 리턴하는 것을 View Resolver 를 자동으로 구성해준다.
+    컨트롤러에서 Model객체를 통해 데이터를 뷰로(HTML)로 전달할 수 있고,<th:>태그를 지원한다.
+
+test05: org.springframework.ui.Model 객체를 확인 하자.
+    -> 컨트롤러에서 View(HTML) 데이터를 전달하기 위한 객체 (웹페이지에서 동적으로 값을 표시할 때 전달용으로 사용)
+    -> addAttribute(Key, value); 키로 값을 저장한다.
+
+    @Pathvariable( URL 경로 변수 바인딩)를 사용하여 값을 전달하는 과정을 확인
+        -→> @RequestMapping("/{num}")
+        public String index@PathVariable int num, Model model)}
+
+
+test06: org.springframework.ui.ModelAndView
+-> 데이터도 담고, 뷰 이름도 설정해준다.
