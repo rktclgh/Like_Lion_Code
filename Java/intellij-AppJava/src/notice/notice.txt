@@ -526,6 +526,51 @@ Day60 5월 23일
 3. spring Boot 에서 @RestController 와 @GetMapping 을 활용하여 HTTP GET 요청을 처리하는 간단한 RESTful API를 개발하고, JSON 응답을 생성하는 기본 흐름을 구현할 수 있다.
 4. Spring Boot 의 내장 웹 서버(Tomcat)의 작동 방식과 Maven 을 통한 의존성 관리 구조를 이해하고, pom.xml 파일을 편집하여 필요한 라이브러리를 추가하거나 수정할 수 있다.
 
+
+Day62 5월 27일
+1. Spring Boot의 글로벌 예외 처리 방식을 이해하고, @ControllerAdvice와 @ExceptionHandler를 사용하여 일관된 오류 응답을 구현할 수 있다.
+
+2. Spring MVC 컨트롤러에서 입력값 검증(validation)을 위해 @valid, @NotBlank, @size 등의 어노테이션을 사용하고, 검증 실패 시 적절한 예외 처리를 수행할 수 있다.
+
+3. API Versioning의 개념을 이해하고, URL Path 방식의 버전 관리를 통해 호환성과 유지보수성을 높이는 방법을 설명할 수 있다.
+
+4. /V1/students, /2/students와 같은 RESTful AP 버전별 컨트몰러를 작성하고, 버전별 기능의 차이를 확인할 수 있다.
+
+====================================================================================================
+Day63 5월 28일==============
+1. Spring Security전반적인 구조와 HttpSecurity 역할을 이해하고 설명할 수 있다.
+2. BCryptPasswordEncoder 를 사용해 비밀번호를 안전하게 암호화 및 저장 할 수 있다.
+3. BCrypt 해시 내부 구조와 솔트•스트레칭의 개념을 이해하여 보안 원리를 설명할 수 있다.
+4. Spring Security에서 BCrypt 해시 검증 과정을 구현할 수 있다.
+5. Spring Security의 인증(Authentication)과 인가(Authorization) 개념을 정확히 이해하고 설명할 수 있다.
+6. Spring Security의 인증 과정(로그인 처리, UserDetailsService, AuthenticationManager)을 단계별로 설명할 수 있고 구현할 수 있다.
+ニニニニニニニニニ===========
+
+
+
+Spring Boot
+[1단계] Controller/Service/Repository 구성 및 H2 DB 연결 확인
+[2단계] Validation 및 Exception Handling 학습
+[3단계] API Versioning 예제 (예: /v1/students, /v2/students)
+[4단계] Swagger 연동
+[5단계] HATEOAS를 이용한 하이퍼미디어 링크 추가 연습
+[6단계] Spring Security를 통한 인증/인가
+[7단계] JPA 고급 매핑 (1:1, 1:N, N:M 등)
+[8단계] Querydsl / Spring Data JPA 커스텀 쿼리
+[9단계] 웹 클라이언트와 통합 (React, Vue 등)
+[10단계] CI/CD 및 클라우드 배포 (Docker, AWS/GCP 등)
+[11단계] (심화) WebSocket, 스케줄링, 파일 처리, 외부 API 연동 등
+
+Day61 5월 26일=== ==================================================================================
+
+1. Controller, Service, Repository 계층을 이해하고 H2 DB와의 연동을 확인하며, Spring MVC 아키텍처의 구조와 목적을 설명할 수 있다.
+2. Swagger를 활용해 API 문서를 자동으로 생성하고, Swagger UI를 통해 개발자 및 사용자 간의 원활한 소통과 테스트 지원의 중요성을 설명할 수 있다.
+3. Spring HATEOAS를 이용해 하이퍼미디어 링크를 추가하고, RESTful API의 탐색성과 사용자 경험 향상을 위한 목적을 설명할 수 있다.
+4. EntityModel과 CollectionModel을 사용하여 하이퍼미디어 링크를 구현할 수 있다.
+5. Mock 및 JUnit 테스트를 활용하여 Controller, Service, Repository 계층의 기능을 김증하고, 안정적인 코드를 구현할 수 있다.
+
+================================================================================================
+
 - etc : 문제
 - notice : 정리
 

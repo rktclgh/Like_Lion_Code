@@ -1,0 +1,21 @@
+# 1. 서버 설정
+server:
+  port: 8080 # 기본값은 8080
+
+# 2. Spring 관련 설정
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+springdoc:
+  use-management-port: true

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoApp</title>
+</head>
+<body>
+<h1>할 일 목록 (TodoList)</h1>
+<!-- 미완료 영역 -->
+<h3>내 할 일 (마이 태스크)</h3>
+<div th:each="todo : ${todos}">
+    <form method="post" th:action="@{/update}">
+        <input type="hidden" name="doneFlg" value="0"/>
+        <input type="checkbox" name="doneFlg" value="1"
+               th:checked="${todo.doneFlg == 1}" />
+
+        <input type="hidden" name="id" th:value="${todo.id}" />
+        <input type="text" name="title" th:value="${todo.title}" />
+        <input type="date" name="timeLimit" th:value="${todo.timeLimit}" />
+        <input type="submit" value="업데이트"/>
+    </form>
+</div>
+
+
+<!-- 완료 영역 -->
+<h3>완료됨 (완료된 할 일)</h3>
+<div th:each="todo : ${doneTodos}">
+    <form method="post" th:action="@{/update}">
+        <input type="hidden" name="doneFlg" value="0"/>
+        <input type="checkbox" name="doneFlg" value="1"
+               th:checked="${todo.doneFlg == 1}" />
+        <input type="hidden" name="id" th:value="${todo.id}" />
+        <input type="text" name="title" th:value="${todo.title}" style="text-decoration:line-through"/>
+        <input type="date" name="timeLimit" th:value="${todo.timeLimit}" required />
+        <input type="submit" value="업데이트" />
+    </form>
+</div>
+<h3>새로운 할 일 추가 (새로운 태스크를 추가)</h3>
+<form method=
+              "post" th:action=
+              "@{/add}">
+    <input type=
+                   "text" name=
+                   "title" />
+    <input type=
+                   "date" name=
+                   "timeLimit"/>
+    <input type=
+                   "submit" value=
+                   "확인" />
+</form>
+
+<form th:action="@{/delete}" method="post" style="display:inline;">
+    <button type="submit">완료 항목 전체 삭제</button>
+</form>
+
+<!--&lt;!&ndash; 미완료 영역 &ndash;&gt;-->
+<!--<h3>내 할 일 (마이 태스크)</h3>-->
+<!--<form method="post" th:action="@{/update}" th:each="todo : ${todos}">-->
+<!--    &lt;!&ndash; 1. 체크 안 할 경우에도 기본값 0 이 전달되도록 hidden 추가 &ndash;&gt;-->
+<!--    <input type="hidden" name="done_flg" value="0"/>-->
+<!--    &lt;!&ndash; 2. 체크하면 이 값이 덮어쓰기됨 → 1 로 전송 &ndash;&gt;-->
+<!--    <input type="checkbox" name="done_flg" value="1" th:checked="${todo.doneFlg}"/>-->
+
+<!--    <input type="hidden" name="id" th:value="${todo.id}" />-->
+<!--    <input type="text" name="title" th:value="${todo.title}" />-->
+<!--    <input type="date" name="timeLimit" th:value="${todo.timeLimit}" required/>-->
+<!--    <input type="submit" value="업데이트" />-->
+<!--</form>-->
+
+<!--&lt;!&ndash; 완료 영역 &ndash;&gt;-->
+<!--<h3>완료됨 (완료된 할 일)</h3>-->
+<!--<form method="post" th:action="@{/update}" th:each="todo : ${doneTodos}">-->
+<!--    &lt;!&ndash; 동일하게 hidden 추가 &ndash;&gt;-->
+<!--    <input type="hidden" name="done_flg" value="0"/>-->
+<!--    <input type="checkbox" name="done_flg" value="1" th:checked="${todo.doneFlg}"/>-->
+
+<!--    <input type="hidden" name="id" th:value="${todo.id}" />-->
+<!--    <input type="text" name="title" th:value="${todo.title}" style="text-decoration:line-through"/>-->
+<!--    <input type="date" name="timeLimit" th:value="${todo.timeLimit}" required/>-->
+<!--    <input type="submit" value="업데이트" />-->
+<!--</form>-->
+
+
+
+
+<!--되던 코드 파트-->
+
+
+</body>
+</html>
