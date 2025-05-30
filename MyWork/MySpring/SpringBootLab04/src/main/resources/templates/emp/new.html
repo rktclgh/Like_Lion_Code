@@ -27,6 +27,14 @@
         <label>부서번호:</label>
         <input type="text" name="dept.deptno" class="form-control"/>
     </div>
+    <div class="mb-3">
+        <label>부사:</label>
+        <select name = "dept.deptno" class="form-select">
+            <option th:each="dept : ${depts}" th:value="${dept.deptno}" th:text = "${dept.deptno+ ' - '+ dept.dname}">
+            </option>
+        </select>
+    </div>
+
     <button type="submit" class="btn btn-primary">등록</button>
     <a href="/emp" class="btn btn-secondary">목록으로</a>
 </form>
