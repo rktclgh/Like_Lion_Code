@@ -526,6 +526,15 @@ Day60 5월 23일
 3. spring Boot 에서 @RestController 와 @GetMapping 을 활용하여 HTTP GET 요청을 처리하는 간단한 RESTful API를 개발하고, JSON 응답을 생성하는 기본 흐름을 구현할 수 있다.
 4. Spring Boot 의 내장 웹 서버(Tomcat)의 작동 방식과 Maven 을 통한 의존성 관리 구조를 이해하고, pom.xml 파일을 편집하여 필요한 라이브러리를 추가하거나 수정할 수 있다.
 
+Day61 5월 26일=== ==================================================================================
+
+1. Controller, Service, Repository 계층을 이해하고 H2 DB와의 연동을 확인하며, Spring MVC 아키텍처의 구조와 목적을 설명할 수 있다.
+2. Swagger를 활용해 API 문서를 자동으로 생성하고, Swagger UI를 통해 개발자 및 사용자 간의 원활한 소통과 테스트 지원의 중요성을 설명할 수 있다.
+3. Spring HATEOAS를 이용해 하이퍼미디어 링크를 추가하고, RESTful API의 탐색성과 사용자 경험 향상을 위한 목적을 설명할 수 있다.
+4. EntityModel과 CollectionModel을 사용하여 하이퍼미디어 링크를 구현할 수 있다.
+5. Mock 및 JUnit 테스트를 활용하여 Controller, Service, Repository 계층의 기능을 김증하고, 안정적인 코드를 구현할 수 있다.
+
+================================================================================================
 
 Day62 5월 27일
 1. Spring Boot의 글로벌 예외 처리 방식을 이해하고, @ControllerAdvice와 @ExceptionHandler를 사용하여 일관된 오류 응답을 구현할 수 있다.
@@ -544,8 +553,21 @@ Day63 5월 28일==============
 4. Spring Security에서 BCrypt 해시 검증 과정을 구현할 수 있다.
 5. Spring Security의 인증(Authentication)과 인가(Authorization) 개념을 정확히 이해하고 설명할 수 있다.
 6. Spring Security의 인증 과정(로그인 처리, UserDetailsService, AuthenticationManager)을 단계별로 설명할 수 있고 구현할 수 있다.
-ニニニニニニニニニ===========
 
+ニニニニニニニニニ===========
+Day64 5월 29일===
+1. OAuth2 =(Open Authorization ) 인증 흐름(Authorization Code Flow)을 단계별로 이해하고, 이를 기반으로 Google OAuth2(클라이언트) 로그인 연동을 구현할 수 있다.
+=> 사용자 비밀 번호를 직접 공유 하지 않고 특정 리소스에 대한 접근 권한을 제3자 어플리케이션에 위임
+2. Google Apl Console에서 OAuth2 클라이언트를 등록하고, 사용자가 Google 로그인을 승인하여 승인 코드와 액세스 토큰을 교환하는 과정을 설명하고 시연할 수 있다.
+3. Spring Boot의 spring-boot-starter-oauth2-client를 활용해 OAuth2 Client 연동을 구현하고, 인증 흐름을 테스트할 수 있다.
+4. Spring Authorization Server를 사용하여 자체 OAuth2 인증 서버를 구축하고, 권한 부여 코드 플로우 및 토큰 발급 과정을 단계별로 설명할 수 있다.
+Day65 5월 30일
+1. JPA의 개념과 핵심 기능을 이해하고 설명할 수 있다.
+2. 엔티티 간의 1:1, 1:N, N:M 관계를 이해하고, JPA의 연관관계 매핑 어노테이션을 MVC 패턴의 데이터 처리에 적용할 수 있다.
+3. 연관관계의 주종 관계, 양방향/단방향 매핑 차이를 파악하여, MVC 기반의 서비스와 컨트롤러에 적합한 엔티티 설계를 수행할 수 있다.
+4. Spring Data JPA 커스텀 쿼리를 활용하여 동적 쿼리 및 복잡한 검색 조건을 구현할 수 있다.
+5. 하이버네이트와 JPA 관계를 이해하고 설명할 수 있다. https://hibemate.org/
+https://docs.jboss.org/hibernate/orm/
 
 
 Spring Boot
@@ -561,15 +583,7 @@ Spring Boot
 [10단계] CI/CD 및 클라우드 배포 (Docker, AWS/GCP 등)
 [11단계] (심화) WebSocket, 스케줄링, 파일 처리, 외부 API 연동 등
 
-Day61 5월 26일=== ==================================================================================
 
-1. Controller, Service, Repository 계층을 이해하고 H2 DB와의 연동을 확인하며, Spring MVC 아키텍처의 구조와 목적을 설명할 수 있다.
-2. Swagger를 활용해 API 문서를 자동으로 생성하고, Swagger UI를 통해 개발자 및 사용자 간의 원활한 소통과 테스트 지원의 중요성을 설명할 수 있다.
-3. Spring HATEOAS를 이용해 하이퍼미디어 링크를 추가하고, RESTful API의 탐색성과 사용자 경험 향상을 위한 목적을 설명할 수 있다.
-4. EntityModel과 CollectionModel을 사용하여 하이퍼미디어 링크를 구현할 수 있다.
-5. Mock 및 JUnit 테스트를 활용하여 Controller, Service, Repository 계층의 기능을 김증하고, 안정적인 코드를 구현할 수 있다.
-
-================================================================================================
 
 - etc : 문제
 - notice : 정리

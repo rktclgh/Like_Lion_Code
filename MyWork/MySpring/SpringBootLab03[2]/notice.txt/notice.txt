@@ -223,27 +223,18 @@ mAKD2.OIGHEyiUszXPEj5oBuwAkJ.q:	실제 해시된 비밀번호
  
 [2단계]  SpringBootLab03[2]
 
- 1) 주요 인터페이스
- -OAuth2AuthorizedClientService:
-    Spring Security에서 OAuth 2.0 클라이언트의 인가된 정보(액세스 토큰, 리프레시 토큰 등)를 저장하고 관리하는 데 사용되는 인터페이스.
+1) 주요 인터페이스
+OAuth2AuthorizedClientService:
+Spring Security에서 OAuth 2.0 클라이언트의 인가된 정보(액세스 토큰, 리프레시 토큰 등)를 저장하고 관리하는 데 사용되는 인터페이스.
                 이 서비스를 통해 사용자가 로그인한 후 발급받은 토큰들이 영구적으로 저장된다.,
 
- -OAuth2UserService<OAuth2UserRequest, OAuth2User>:
+OAuth2UserService<OAuth2UserRequest, OAuth2User>:
    OAuth 2.0 제공자(예: Google)로부터 액세스 토큰을 사용하여 사용자 정보를 가져오는(로드하는) 역할을 하는 인터페이스.,
 
-  - OAuth2User: OAuth2UserService를 통해 로드되는, OAuth 2.0 제공자로부터 인증된 사용자의 정보를 나타내는 Spring Security의 인터페이스.
+OAuth2User: OAuth2UserService를 통해 로드되는, OAuth 2.0 제공자로부터 인증된 사용자의 정보를 나타내는 Spring Security의 인터페이스.
    컨트롤러에서 @AuthenticationPrincipal 어노테이션을 사용하여 이 객체를 주입받아 현재 로그인한 사용자의 정보를 활용,
- -org.springframework.security.core.annotation.AuthenticationPrincipal
-    : 메소드에 @AuthenticationPrincipal 지정하면  현재 인증된 주체(Principal)의 상세 정보를 컨트롤러 메서드의 파라미터로 쉽게 주입받을 수 있도록 해주는 어노테이션
-
-
- - org.springframework.security.core.annotation.AuthenticationPrincipal
- : 메소드에 @AuthenticationPrincipal 지정하면 현재 인증된 주체 (Principal)의 상세 정보를 컨트롤러 메서드의 파라미터로 쉽게 주입받을 수 있도록 해주는 어노테이션
-
- - Authentication <---- OAuth2LoginAuthenticationToken : OAuth2 로그인 과정 중 최종적으로 생성되는 인증 토큰 객체,
-            사용자 인증이 성공했음을 리턴해주는 토큰 클래스, SecurityContext에 저장된다.
-
-
+org.springframework.security.core.annotation.AuthenticationPrincipal
+: 메소드에 @AuthenticationPrincipal 지정하면  현재 인증된 주체(Principal)의 상세 정보를 컨트롤러 메서드의 파라미터로 쉽게 주입받을 수 있도록 해주는 어노테이션
 
 2) 구현 순서
 
