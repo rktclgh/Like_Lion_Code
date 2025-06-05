@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>사원 목록</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<h1>사원 목록</h1>
+<table border="1">
+    <tr>
+        <th>사원번호</th>
+        <th>이름</th>
+		<th>직무</th>
+        <th>급여</th>
+		<th>부서명</th>
+		<th>근무지역</th>
+    </tr>
+    <tr th:each="emp : ${emps}">
+        <td th:text="${emp.empno}"></td>
+        <td th:text="${emp.ename}"></td>
+        <td th:text="${emp.job}"></td>
+		<td th:text="${emp.sal}"></td>
+		<td th:text="${emp.dept != null ? emp.dept.dname:'없음'}"></td>
+		<td th:text="${emp.dept != null ? emp.dept.loc:'없음'}"></td>
+    </tr>
+</table>
+</body>
+</html>

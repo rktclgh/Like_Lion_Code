@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>사원-부서 정보(페이징)</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<h1>사원-부서 정보(페이징)</h1>
+<table border="1">
+    <tr>
+       
+        <th>이름 	<a th:href="@{|/emp-info?page=0&sortBy=ename&direction=asc|}">  오름차순</a> </th>
+		<th>급여 	<a th:href="@{|/emp-info?page=0&sortBy=sal&direction=desc|}"> 내림차순</a> </th>
+		<th>부서명 <a th:href="@{|/emp-info?page=0&sortBy=ename&direction=desc|}"> 내림차순</a> </th>
+		
+    </tr>
+	
+	
+	    
+	    
+	</div>
+	
+    <tr th:each="emp : ${empPage.content}">
+        
+        <td th:text="${emp.ename}"></td>
+		<td th:text="${emp.sal}"></td>
+		<td th:text="${emp.dname}"></td>
+    </tr>
+</table>
+
+
+<!-- ||(파이프) 안에 있는 값을 하나의 전체 문자열로 만들어준다  -->
+<div>
+	<a th:href = "@{|emp-info?page=${empPage.number -1}&sortBy=ename&direction=asc|}" 
+		th:if="${empPage.hasPrevious()}"> 이전</a>
+		
+	<span th:text = ${empPage.number+1}> </span> / <span th:text = ${empPage.totalPages}> </span>
+	
+	<a th:href = "@{|emp-info?page=${empPage.number + 1}&sortBy=ename&direction=asc|}"
+			th:if="${empPage.hasNext()}">다음</a>
+</div>
+
+</body>
+</html>
+
+
+<!--<div> 
+    <a th:href="@{|/emp-info?page=0&sortBy=ename&direction=asc|}">이름 
+오름차순</a> 
+    <a th:href="@{|/emp-info?page=0&sortBy=ename&direction=desc|}">이름 
+내림차순</a> 
+    <a th:href="@{|/emp-info?page=0&sortBy=sal&direction=asc|}">급여 
+오름차순</a> 
+</div>-->
